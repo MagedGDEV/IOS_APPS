@@ -8,10 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
-    var emojis = ["🚗", "🚕", "🚙", "🚌", "🚎", "🏎️", "🚓", "🚑",
-                  "🚒", "🚐", "🛻", "🚚", "🚛", "🚜", "🦽", "🦼",
-                  "🛴", "🚲", "🛵", "🏍️", "🛺", "🚡", "🚠", "🚃"]
-    @State var emojiCount = 4
+    var vehicles = ["🚗", "🚕", "🚙", "🚌", "🚎", "🏎️", "🚓", "🚑",
+                    "🚒", "🚐", "🛻", "🚚", "🚛", "🚜", "🦽", "🦼",
+                    "🛴", "🚲", "🛵", "🏍️", "🛺", "🚡", "🚠", "🚃"]
+    var smileys = ["😀", "😃", "😄", "😁", "😆", "🥹", "😅", "😂",
+                   "🤣", "🥲", "☺️", "😊", "😇", "🙂", "🙃", "😉",
+                   "😌", "😍", "🥰", "😘", "😗", "😙", "😚", "😋",
+                   "😛", "😝", "😜", "🤪", "🤨", "🧐", "🤓", "😎"]
+    var animals = ["🐶", "🐱", "🐭", "🐹", "🐰", "🦊", "🐻", "🐼",
+                   "🐻‍❄️", "🐨", "🐯", "🦁", "🐮", "🐷", "🐸", "🐵",
+                   "🐔", "🐧", "🐦", "🐤", "🦆", "🦅", "🦉", "🦇",
+                   "🐺", "🐗", "🐴", "🦄", "🐊"]
+
+    @State var emojis: [String]
+    @State var emojiCount: Int
+    
+    
+    init (){
+        emojis = vehicles
+        emojiCount = vehicles.count
+    }
     
     var body: some View {
         VStack{
@@ -24,9 +40,52 @@ struct ContentView: View {
                 }
             }
             .foregroundColor(.red)
+            Spacer()
+            HStack {
+                vehicleButton
+                Spacer()
+                simleyButton
+                Spacer()
+                animalButton
+            }
+            .foregroundColor(.blue)
+            .padding(.horizontal)
         }
         .padding(.horizontal)
-        
+    }
+    
+    var vehicleButton: some View {
+        Button {
+            emojis = vehicles.shuffled()
+            emojiCount = vehicles.count
+        } label: {
+            VStack {
+                Image(systemName: "car").font(.largeTitle)
+                Text("Vehicles")
+            }
+        }
+    }
+    var simleyButton: some View {
+        Button {
+            emojis = smileys.shuffled()
+            emojiCount = smileys.count
+        } label: {
+            VStack {
+                Image(systemName: "face.smiling").font(.largeTitle)
+                Text("Simleys")
+            }
+        }
+    }
+    var animalButton: some View {
+        Button {
+            emojis = animals.shuffled()
+            emojiCount = animals.count
+        } label: {
+            VStack {
+                Image(systemName: "pawprint").font(.largeTitle)
+                Text("Animals")
+            }
+        }
     }
 }
 
