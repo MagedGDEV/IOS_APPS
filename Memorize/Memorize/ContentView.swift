@@ -119,8 +119,15 @@ struct CardView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .preferredColorScheme(.light)
+            .previewDevice(PreviewDevice(rawValue: "iPhone 14"))
+            .previewDisplayName("iPhone 14")
+
         ContentView()
-            .preferredColorScheme(.dark)
+            .previewDevice(PreviewDevice(rawValue: "iPhone 14 Pro Max"))
+            .previewDisplayName("iPhone 14 Pro Max")
+        
+        ContentView()
+            .previewDevice(PreviewDevice(rawValue: "iPhone 11"))
+            .previewDisplayName("iPhone 11")
     }
 }
