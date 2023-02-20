@@ -20,6 +20,7 @@ struct ContentView: View {
                     CardView(content: emoji)
                 }
             }
+            .foregroundColor(.red)
             Spacer()
             HStack{
                 remove
@@ -30,12 +31,15 @@ struct ContentView: View {
             .font(.largeTitle)
         }
         .padding(.horizontal)
-        .foregroundColor(.red)
+        
     }
     
     var add: some View {
         Button {
-            emojiCount+=1
+            if emojiCount < emojis.count{
+                emojiCount+=1
+            }
+                
         } label: {
             Image(systemName: "plus.circle")
         }
@@ -43,7 +47,10 @@ struct ContentView: View {
     
     var remove: some View {
         Button {
-            emojiCount-=1
+            if emojiCount > 1 {
+                emojiCount-=1
+            }
+            
         } label: {
             Image(systemName: "minus.circle")
         }
