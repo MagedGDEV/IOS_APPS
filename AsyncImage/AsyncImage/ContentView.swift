@@ -44,23 +44,38 @@ struct ContentView: View {
         
         
         // MARK: - 4: PHASE
-        AsyncImage (url: URL(string: imageURL)) { phase in
-            // Success: image successfully loaded.
-            // Failure: image failed to load
-            // Empty: Loading state
-            
-            if let image = phase.image {
+//        AsyncImage (url: URL(string: imageURL)) { phase in
+//            // Success: image successfully loaded.
+//            // Failure: image failed to load
+//            // Empty: Loading state
+//
+//            if let image = phase.image {
+//                image.imageModifier()
+//            }
+//            else if phase.error != nil {
+//                Image(systemName: "ant.circle.fill").iconModifier()
+//            }
+//            else {
+//                Image(systemName: "photo.circle.fill").iconModifier()
+//            }
+//        }
+//        .padding(40)
+        
+        
+        // MARK: - 5: ANIMATION
+        AsyncImage(url: URL(string: imageURL)){ phase in
+            switch (phase){
+            case .success(let image):
                 image.imageModifier()
-            }
-            else if phase.error != nil {
+            case .failure(_):
                 Image(systemName: "ant.circle.fill").iconModifier()
-            }
-            else {
+            case .empty:
                 Image(systemName: "photo.circle.fill").iconModifier()
+            default:
+                ProgressView()
             }
         }
         .padding(40)
-        
     }
 }
 
