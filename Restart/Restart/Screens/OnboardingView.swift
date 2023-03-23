@@ -14,7 +14,7 @@ struct OnboardingView: View {
             Text("Onboarding")
                 .font(.largeTitle)
             Button(action: {
-                // some action
+                isOnboardingViewActive = false
             }) {
                 Text("Start")
             }
