@@ -15,15 +15,15 @@ struct ContentView: View {
         // MARK: - 2: SCALE
         //AsyncImage(url: URL(string: imageURL), scale: 3.0)
         // MARK: - 3: PLACEHOLDER
-        AsyncImage(url: URL(string: imageURL), scale: 3.0) {
-            image in image
+        AsyncImage(url: URL(string: imageURL), scale: 3.0) {image in
+            image
                 .resizable()
                 .scaledToFit()
         } placeholder: {
             Image(systemName: "photo.circle.fill")
                 .resizable()
                 .scaledToFit()
-                .frame(maxWidth: 120)
+                .frame(maxWidth: 128)
                 .foregroundColor(.purple)
                 .opacity(0.5)
         }
