@@ -92,6 +92,9 @@ struct OnboardingView: View {
                         .frame(width: 80, height: 80, alignment: .center)
                         Spacer()
                     }
+                    .onTapGesture {
+                        isOnboardingViewActive = false
+                    }
                     
                 }
                 .frame(height: 80, alignment: .center)
