@@ -56,13 +56,39 @@ struct OnboardingView: View {
                 Spacer()
                 
                 // MARK: - FOOTER
-                // 1. Background (Static)
+                
                 ZStack {
+                    // 1. Background (Static)
                     Capsule()
                         .fill(.white.opacity(0.2))
                     Capsule()
                         .fill(.white.opacity(0.2))
                         .padding(8)
+                    // 2. Call-To-Action (Static)
+                    
+                    // 3. Capsule (sliding dynamic)
+                    HStack {
+                        Capsule()
+                            .fill(Color("ColorRed"))
+                            .frame(width: 80)
+                        Spacer()
+                    }
+                    // 4. Circle (Draggable)
+                    HStack {
+                        ZStack{
+                            Circle()
+                                .fill(Color("ColorRed"))
+                            Circle()
+                                .fill(.black.opacity(0.15))
+                                .padding(8)
+                            Image (systemName: "chevron.right.2")
+                                .font(.system(size: 24, weight: .bold))
+                        }
+                        .foregroundColor(.white)
+                        .frame(width: 80, height: 80, alignment: .center)
+                        Spacer()
+                    }
+                    
                 }
                 .frame(height: 80, alignment: .center)
                 .padding()
