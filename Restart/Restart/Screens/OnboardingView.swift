@@ -53,13 +53,21 @@ struct OnboardingView: View {
                             .scaledToFit()
                     }
                 }
-                
                 Spacer()
                 
                 // MARK: - FOOTER
+                // 1. Background (Static)
+                ZStack {
+                    Capsule()
+                        .fill(.white.opacity(0.2))
+                    Capsule()
+                        .fill(.white.opacity(0.2))
+                        .padding(8)
+                }
+                .frame(height: 80, alignment: .center)
+                .padding()
                 
-                
-                
+                Spacer()
             }
         }
     }
