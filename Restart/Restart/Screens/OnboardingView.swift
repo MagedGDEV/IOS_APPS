@@ -99,14 +99,16 @@ struct OnboardingView: View {
                                     buttonOffset = gesture.translation.width
                                 }
                             }.onEnded { _ in
-                                if buttonOffset > buttonWidth / 2 {
-                                    buttonOffset = buttonWidth - 30
-                                    isOnboardingViewActive = false
+                                withAnimation(Animation.easeIn(duration: 0.4)){
+                                    if buttonOffset > buttonWidth / 2 {
+                                        buttonOffset = buttonWidth - 30
+                                        isOnboardingViewActive = false
+                                                
+                                    }
+                                    else {
+                                        buttonOffset = 0
+                                    }
                                 }
-                                else {
-                                    buttonOffset = 0
-                                }
-                                
                             }
                         )
                         Spacer()
