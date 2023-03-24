@@ -13,6 +13,7 @@ struct OnboardingView: View {
     
     @State private var buttonWidth: Double = UIScreen.main.bounds.width - 80
     @State private var buttonOffset: CGFloat = 0
+    @State private var isAnimating: Bool = false
     // MARK: - BODY
     
     var body: some View {
@@ -39,6 +40,9 @@ struct OnboardingView: View {
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 10)
                 }
+                .opacity(isAnimating ? 1 : 0)
+                .offset(y: isAnimating ? 0 : -40)
+                .animation(.easeOut(duration: 1), value: isAnimating)
                 
                 // MARK: - CENTER
                 
@@ -110,9 +114,10 @@ struct OnboardingView: View {
                 .frame(height: 80, alignment: .center)
                 .padding()
                 
-                Spacer()
             }
-        }
+        }.onAppear(perform: {
+            isAnimating = true
+        })
     }
 }
 
