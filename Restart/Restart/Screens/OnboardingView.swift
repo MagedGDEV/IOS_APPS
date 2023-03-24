@@ -65,7 +65,11 @@ struct OnboardingView: View {
                         .fill(.white.opacity(0.2))
                         .padding(8)
                     // 2. Call-To-Action (Static)
-                    
+                    Text ("Get Started")
+                        .font(.system(.title3, design: .rounded))
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .offset(x: 20)
                     // 3. Capsule (sliding dynamic)
                     HStack {
                         Capsule()
