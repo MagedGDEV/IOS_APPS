@@ -14,6 +14,7 @@ struct OnboardingView: View {
     @State private var buttonWidth: Double = UIScreen.main.bounds.width - 80
     @State private var buttonOffset: CGFloat = 0
     @State private var isAnimating: Bool = false
+    @State private var imageOffset: CGSize = .zero
     // MARK: - BODY
     
     var body: some View {
@@ -52,7 +53,23 @@ struct OnboardingView: View {
                         .resizable()
                         .scaledToFit()
                         .opacity(isAnimating ? 1 : 0)
-                        .animation(.easeOut(duration: 1), value: isAnimating)                }
+                        .animation(.easeOut(duration: 1), value: isAnimating)
+                        .offset(x: imageOffset.width * 1.2, y: 0)
+                        .rotationEffect(.degrees(Double(imageOffset.width/20)))
+                        .gesture(
+                            DragGesture()
+                                .onChanged{ gesture in
+                                    if abs(imageOffset.width) <= 150{
+                                        imageOffset = gesture.translation
+                                    }
+                                    
+                                }
+                                .onEnded{ _ in
+                                    imageOffset = .zero
+                                }
+                        )
+                        .animation(.easeOut(duration: 1), value: imageOffset)
+                }
                 Spacer()
                 
                 // MARK: - FOOTER
