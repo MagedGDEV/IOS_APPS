@@ -16,6 +16,7 @@ struct OnboardingView: View {
     @State private var isAnimating: Bool = false
     @State private var imageOffset: CGSize = .zero
     @State private var indicatorOpacity: Double = 1
+    @State private var textTile: String = "Share."
     // MARK: - BODY
     
     var body: some View {
@@ -27,10 +28,12 @@ struct OnboardingView: View {
                 
                 Spacer()
                 VStack(){
-                    Text("Share.")
+                    Text(textTile)
                         .font(.system(size:60))
                         .fontWeight(.heavy)
                         .foregroundColor(.white)
+                        .transition(.opacity)
+                        .id(textTile)
                     
                         Text("""
                         It's not how much we give but
@@ -67,6 +70,7 @@ struct OnboardingView: View {
                                         imageOffset = gesture.translation
                                         withAnimation(.linear(duration: 0.25)){
                                             indicatorOpacity = 0
+                                            textTile = "Give."
                                         }
                                     }
                                     
@@ -75,6 +79,7 @@ struct OnboardingView: View {
                                     imageOffset = .zero
                                     withAnimation(.linear(duration: 0.25)){
                                         indicatorOpacity = 1
+                                        textTile = "Share."
                                     }
                                 }
                         )
