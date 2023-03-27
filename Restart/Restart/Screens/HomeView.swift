@@ -48,6 +48,8 @@ struct HomeView: View {
             Button(action:{
                 withAnimation{
                     isOnboardingViewActive = true
+
+                    playSound(sound: "success", type: "m4a")
                 }
             }){
                 // This is by default an HStack
