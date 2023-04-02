@@ -14,6 +14,9 @@ struct ContentView: View {
     
     let tipPercentages = [0, 10, 15, 20, 25]
 
+    var totalPerPerson: Double {
+        return checkAmount * (Double(tipPercentage)/100) / Double(numberOfPeople + 2)
+    }
     
     var body: some View {
         NavigationView {
@@ -22,6 +25,7 @@ struct ContentView: View {
                     TextField("Amount", value: $checkAmount, format:
                             .currency(code: Locale.current.currency?.identifier ?? "USD"))
                     .keyboardType(.decimalPad)
+                    
                     Picker ("Number of people", selection: $numberOfPeople){
                         ForEach (2..<100){
                             Text ("\($0) people")
@@ -39,7 +43,7 @@ struct ContentView: View {
                     Text ("How much tip you want to leave")
                 }
                 Section {
-                    Text(checkAmount, format:
+                    Text(totalPerPerson, format:
                             .currency(code: Locale.current.currency?.identifier ?? "USD"))
                 }
             }
