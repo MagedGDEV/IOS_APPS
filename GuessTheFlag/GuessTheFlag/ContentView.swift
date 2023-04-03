@@ -9,10 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ZStack (alignment: .leading){
-            Text ("Hello, world")
-            Text ("This is inside a stack")
+        ZStack {
+            Text ("Your content")
         }
+        .background(.red)
     }
 }
 
