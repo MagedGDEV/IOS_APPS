@@ -10,8 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack {
-            Color.primary
-            Text ("Your content")
+            Color (red: 1, green: 0.8, blue: 0)
         }
     }
 }
