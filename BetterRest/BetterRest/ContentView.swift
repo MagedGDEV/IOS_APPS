@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var sleepAmount = 8.0
+    @State private var wakeUp = Date.now
     
     var body: some View {
-        Stepper("\(sleepAmount.formatted()) hours", value: $sleepAmount, step: 0.25)
+            DatePicker ("Please enter a time", selection: $wakeUp)
     }
 }
 
