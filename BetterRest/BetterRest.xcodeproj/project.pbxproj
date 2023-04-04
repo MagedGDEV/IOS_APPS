@@ -11,6 +11,7 @@
 		AEEF301C29DC0810003FEC78 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEF301B29DC0810003FEC78 /* ContentView.swift */; };
 		AEEF301E29DC0811003FEC78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEEF301D29DC0811003FEC78 /* Assets.xcassets */; };
 		AEEF302129DC0811003FEC78 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEEF302029DC0811003FEC78 /* Preview Assets.xcassets */; };
+		AEEF302A29DC256F003FEC78 /* BetterRest 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AEEF302929DC256F003FEC78 /* BetterRest 1.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		AEEF301B29DC0810003FEC78 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AEEF301D29DC0811003FEC78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEEF302029DC0811003FEC78 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AEEF302929DC256F003FEC78 /* BetterRest 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = "BetterRest 1.mlmodel"; path = "../../BetterRest 1.mlmodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				AEEF301929DC0810003FEC78 /* BetterRestApp.swift */,
 				AEEF301B29DC0810003FEC78 /* ContentView.swift */,
+				AEEF302929DC256F003FEC78 /* BetterRest 1.mlmodel */,
 				AEEF301D29DC0811003FEC78 /* Assets.xcassets */,
 				AEEF301F29DC0811003FEC78 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEEF302A29DC256F003FEC78 /* BetterRest 1.mlmodel in Sources */,
 				AEEF301C29DC0810003FEC78 /* ContentView.swift in Sources */,
 				AEEF301A29DC0810003FEC78 /* BetterRestApp.swift in Sources */,
 			);

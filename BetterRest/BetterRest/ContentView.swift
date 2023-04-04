@@ -26,6 +26,10 @@ struct ContentView: View {
                     .font(.headline)
                 Stepper(coffeeAmount == 1 ? "1 cup" : "\(coffeeAmount) cups", value: $coffeeAmount, in: 1...20)
             }
+            .navigationTitle("BetterRest")
+            .toolbar {
+                Button ("Calculate", action: calculateBedtime)
+            }
         }
     }
     
