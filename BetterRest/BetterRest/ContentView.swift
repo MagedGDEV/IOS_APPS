@@ -22,8 +22,15 @@ struct ContentView: View {
                 Text("Desired amount of sleep")
                     .font(.headline)
                 Stepper("\(sleepAmount.formatted()) hours", value: $sleepAmount, in: 4...12, step: 0.25)
+                Text("Daily coffee intake")
+                    .font(.headline)
+                Stepper(coffeeAmount == 1 ? "1 cup" : "\(coffeeAmount) cups", value: $coffeeAmount, in: 1...20)
             }
         }
+    }
+    
+    func calculateBedtime() {
+        
     }
 }
 
