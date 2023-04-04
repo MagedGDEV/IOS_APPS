@@ -11,7 +11,7 @@ struct ContentView: View {
     @State private var wakeUp = Date.now
     
     var body: some View {
-        DatePicker ("Please enter a time", selection: $wakeUp, displayedComponents: .hourAndMinute)
+        DatePicker ("Please enter a time", selection: $wakeUp, in: Date.now...)
             .labelsHidden()
     }
 }
