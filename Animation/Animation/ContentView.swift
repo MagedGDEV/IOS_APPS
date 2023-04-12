@@ -20,8 +20,8 @@ struct ContentView: View {
         .scaleEffect(animationAmount)
         .blur(radius:(animationAmount - 1) * 3)
         .animation(
-            .easeInOut(duration: 2)
-            .delay(1),
+            .easeInOut(duration: 1)
+            .repeatCount(3, autoreverses: true),
             value: animationAmount)
     }
 }
