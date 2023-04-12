@@ -18,6 +18,7 @@ struct ContentView: View {
         .background(.red)
         .clipShape(Circle())
         .scaleEffect(animationAmount)
+        .animation(.default, value: animationAmount)
     }
 }
 
