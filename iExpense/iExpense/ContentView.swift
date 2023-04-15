@@ -7,20 +7,27 @@
 
 import SwiftUI
 
-class User: ObservableObject {
-    @Published var firstName = "Maged"
-    @Published var lastName = "Elesseily"
+struct SecondView: View {
+    @Environment(\.dismiss) var dismiss
+    let name: String
+    var body: some View {
+        VStack {
+            Text (name)
+            Button("Dismiss") {
+                dismiss()
+            }
+        }
+    }
 }
 
 struct ContentView: View {
-    
-    @StateObject private var user = User ()
-    
+    @State private var showingSheet = false
     var body: some View {
-        VStack {
-            Text("Your name is \(user.firstName) \(user.lastName)")
-            TextField("First Name", text: $user.firstName)
-            TextField("Last Name", text: $user.lastName)
+        Button ("Show sheet"){
+            showingSheet.toggle()
+        }
+        .sheet(isPresented: $showingSheet) {
+            SecondView(name: "Maged")
         }
     }
 }
