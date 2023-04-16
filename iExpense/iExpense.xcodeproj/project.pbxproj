@@ -11,6 +11,8 @@
 		AE304A6029EB412E00008F84 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE304A5F29EB412E00008F84 /* ContentView.swift */; };
 		AE304A6229EB412F00008F84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE304A6129EB412F00008F84 /* Assets.xcassets */; };
 		AE304A6529EB412F00008F84 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE304A6429EB412F00008F84 /* Preview Assets.xcassets */; };
+		AEAB880C29EC129E00B36350 /* ExpenseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAB880B29EC129E00B36350 /* ExpenseItem.swift */; };
+		AEAB880E29EC12B600B36350 /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAB880D29EC12B600B36350 /* Expenses.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		AE304A5F29EB412E00008F84 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AE304A6129EB412F00008F84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE304A6429EB412F00008F84 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AEAB880B29EC129E00B36350 /* ExpenseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseItem.swift; sourceTree = "<group>"; };
+		AEAB880D29EC12B600B36350 /* Expenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,8 @@
 			isa = PBXGroup;
 			children = (
 				AE304A5D29EB412E00008F84 /* iExpenseApp.swift */,
+				AEAB880B29EC129E00B36350 /* ExpenseItem.swift */,
+				AEAB880D29EC12B600B36350 /* Expenses.swift */,
 				AE304A5F29EB412E00008F84 /* ContentView.swift */,
 				AE304A6129EB412F00008F84 /* Assets.xcassets */,
 				AE304A6329EB412F00008F84 /* Preview Content */,
@@ -137,7 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEAB880E29EC12B600B36350 /* Expenses.swift in Sources */,
 				AE304A6029EB412E00008F84 /* ContentView.swift in Sources */,
+				AEAB880C29EC129E00B36350 /* ExpenseItem.swift in Sources */,
 				AE304A5E29EB412E00008F84 /* iExpenseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
