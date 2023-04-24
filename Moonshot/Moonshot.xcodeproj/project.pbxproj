@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE33980F29F6D76D003DB17E /* astronauts.json in Resources */ = {isa = PBXBuildFile; fileRef = AE33980D29F6D76D003DB17E /* astronauts.json */; };
+		AE33981029F6D76D003DB17E /* missions.json in Resources */ = {isa = PBXBuildFile; fileRef = AE33980E29F6D76D003DB17E /* missions.json */; };
+		AE33981229F6D7EF003DB17E /* Astronaut.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE33981129F6D7EF003DB17E /* Astronaut.swift */; };
+		AE33981429F6D809003DB17E /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE33981329F6D809003DB17E /* Bundle-Decodable.swift */; };
+		AE33981629F6DE37003DB17E /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE33981529F6DE37003DB17E /* Mission.swift */; };
 		AE8AD43E29EF3A5C00F7B4E4 /* MoonshotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8AD43D29EF3A5C00F7B4E4 /* MoonshotApp.swift */; };
 		AE8AD44029EF3A5C00F7B4E4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8AD43F29EF3A5C00F7B4E4 /* ContentView.swift */; };
 		AE8AD44229EF3A5D00F7B4E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE8AD44129EF3A5D00F7B4E4 /* Assets.xcassets */; };
@@ -14,6 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE33980D29F6D76D003DB17E /* astronauts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = astronauts.json; sourceTree = "<group>"; };
+		AE33980E29F6D76D003DB17E /* missions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = missions.json; sourceTree = "<group>"; };
+		AE33981129F6D7EF003DB17E /* Astronaut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astronaut.swift; sourceTree = "<group>"; };
+		AE33981329F6D809003DB17E /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
+		AE33981529F6DE37003DB17E /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
 		AE8AD43A29EF3A5C00F7B4E4 /* Moonshot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moonshot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE8AD43D29EF3A5C00F7B4E4 /* MoonshotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonshotApp.swift; sourceTree = "<group>"; };
 		AE8AD43F29EF3A5C00F7B4E4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +63,11 @@
 			children = (
 				AE8AD43D29EF3A5C00F7B4E4 /* MoonshotApp.swift */,
 				AE8AD43F29EF3A5C00F7B4E4 /* ContentView.swift */,
+				AE33981129F6D7EF003DB17E /* Astronaut.swift */,
+				AE33981529F6DE37003DB17E /* Mission.swift */,
+				AE33981329F6D809003DB17E /* Bundle-Decodable.swift */,
+				AE33980D29F6D76D003DB17E /* astronauts.json */,
+				AE33980E29F6D76D003DB17E /* missions.json */,
 				AE8AD44129EF3A5D00F7B4E4 /* Assets.xcassets */,
 				AE8AD44329EF3A5D00F7B4E4 /* Preview Content */,
 			);
@@ -125,7 +140,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE33980F29F6D76D003DB17E /* astronauts.json in Resources */,
 				AE8AD44529EF3A5D00F7B4E4 /* Preview Assets.xcassets in Resources */,
+				AE33981029F6D76D003DB17E /* missions.json in Resources */,
 				AE8AD44229EF3A5D00F7B4E4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +156,9 @@
 			files = (
 				AE8AD44029EF3A5C00F7B4E4 /* ContentView.swift in Sources */,
 				AE8AD43E29EF3A5C00F7B4E4 /* MoonshotApp.swift in Sources */,
+				AE33981229F6D7EF003DB17E /* Astronaut.swift in Sources */,
+				AE33981629F6DE37003DB17E /* Mission.swift in Sources */,
+				AE33981429F6D809003DB17E /* Bundle-Decodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
