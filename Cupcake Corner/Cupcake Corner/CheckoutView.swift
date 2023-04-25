@@ -9,6 +9,10 @@ import SwiftUI
 
 struct CheckoutView: View {
     @ObservedObject var order: Order
+    
+    @State private var showingAlert = false
+    @State private var confimationMessage = ""
+    
     var body: some View {
         ScrollView {
             VStack {
@@ -33,6 +37,11 @@ struct CheckoutView: View {
         }
         .navigationTitle("Checkout")
         .navigationBarTitleDisplayMode(.inline)
+        .alert("Thank you", isPresented: $showingAlert){
+            Button("OK") {}
+        } message: {
+            Text(confimationMessage)
+        }
     }
     
     func placeOrder() async {
@@ -48,6 +57,10 @@ struct CheckoutView: View {
         
         do {
             let (data, _) = try await URLSession.shared.upload(for: request, from: encoded)
+            
+            let decodedOrder = try JSONDecoder().decode(Order.self, from: data)
+            confimationMessage = "Your order for \(decodedOrder.quantity)x\(decodedOrder.types[decodedOrder.type].lowercased()) cupcakes is on it's way!"
+            showingAlert = true
         } catch {
             print("Checkout failed.")
         }
