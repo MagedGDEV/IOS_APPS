@@ -36,9 +36,13 @@ struct ContentView: View {
                         }
                     }
                 }
+                .onDelete(perform: deleteBook)
             }
                 .navigationTitle("Bookworm")
                 .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        EditButton()
+                    }
                     ToolbarItem(placement: .navigationBarTrailing){
                         Button {
                             showingSheet.toggle()
@@ -51,6 +55,13 @@ struct ContentView: View {
         .sheet(isPresented: $showingSheet){
             AddBookView()
         }
+    }
+    func deleteBook(at offsets: IndexSet){
+        for offset in offsets {
+            let book = books[offset]
+            moc.delete(book)
+        }
+        try? moc.save()
     }
 }
     
