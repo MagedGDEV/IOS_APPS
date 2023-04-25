@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AddBookView: View {
     @Environment(\.managedObjectContext) private var moc
+    @Environment(\.dismiss) private var dismiss
     
     @State private var title = ""
     @State private var author = ""
@@ -54,6 +55,7 @@ struct AddBookView: View {
                         newBook.rating = Int16(rating)
                         
                         try? moc.save()
+                        dismiss()
                     }
                 }
             }
