@@ -15,12 +15,20 @@ struct ContentView: View {
         NavigationView {
             Form {
                 Section {
-                    Picker ("Select your cake type", selection: $order.type){
+                    Picker("Select your cake type", selection: $order.type){
                         ForEach(order.types.indices, id: \.self){
                             Text("\(order.types[$0])")
                         }
                     }
-                    Stepper ("Number of cakes: \(order.quantity)", value: $order.quantity, in: 3...20)
+                    Stepper("Number of cakes: \(order.quantity)", value: $order.quantity, in: 3...20)
+                }
+                
+                Section {
+                    Toggle("Any special Request", isOn: $order.specialRequestEnabled.animation())
+                    if (order.specialRequestEnabled) {
+                        Toggle("Add extra frosting", isOn: $order.extraFrosting)
+                        Toggle("Add extra sprinkles", isOn: $order.addSprinkles)
+                    }
                 }
             }
             .navigationTitle("Cupcake Corner")
