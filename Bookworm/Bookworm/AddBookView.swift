@@ -45,7 +45,15 @@ struct AddBookView: View {
                 
                 Section {
                     Button("Save") {
+                        let newBook = Book(context: moc)
+                        newBook.id = UUID()
+                        newBook.title = title
+                        newBook.author = author
+                        newBook.genre = genre
+                        newBook.review = review
+                        newBook.rating = Int16(rating)
                         
+                        try? moc.save()
                     }
                 }
             }
